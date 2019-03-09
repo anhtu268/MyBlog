@@ -1,0 +1,231 @@
+@font-face {
+	font-family: AmaticSC-Bold;
+	src: url('../../asset/font/AmaticSC-Bold.ttf');
+}
+
+* {
+	font-family: serif;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: calc(22px + 6 * ((100vw - 320px) / 680));
+  }
+}
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 26px;
+  }
+}
+
+html {
+	background: url('../../asset/img/index-bg.jpg') no-repeat fixed;
+	background-size: cover;
+	width: 100%;
+	font-size: 22px;
+}
+
+body {
+	display: grid;
+	grid-gap: 20px;
+	width: 100%;
+	grid-template-areas: 
+		'nav nav nav nav nav nav'
+		'main main main main main main'
+		'footer footer footer footer footer footer' ;
+}
+
+nav {
+	grid-area: nav;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index:1000;
+	background-color: black;
+	box-shadow: 0px 4px 20px 2px #000;
+	opacity: 0.8;
+}
+
+nav a {
+	border-top: 2px solid black;
+	font-family: AmaticSC-Bold;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	padding: 0.1rem;
+	margin: 0.1rem 0.2rem;
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+
+nav a:hover, nav a:focus {
+	border-top: 2px solid white;
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+
+nav button {
+	border-top: 2px solid black;
+	font-family: AmaticSC-Bold;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	padding: 0.1rem;
+	margin: 0.1rem 0.2rem;
+	-webkit-transition: all .25s;
+	   -moz-transition: all .25s;
+	    -ms-transition: all .25s;
+	     -o-transition: all .25s;
+	        transition: all .25s;
+}
+
+nav .actived{
+	border-top: 2px solid white;
+}
+
+footer {
+	grid-area: footer;
+	width: 100%;
+	background-color: #fff;
+	opacity: 0.3;
+	color: #000;
+	text-align: center;
+	font-weight: bold;
+	box-shadow: 0px 0px 20px 0px #000;
+}
+
+main {
+	grid-area: main;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+main .container {
+	flex-grow: 1;
+	flex: 100%;
+	align-self: flex-start;
+	background-color: #000;
+	border-radius: 3px;
+	opacity: 0.6;
+	box-shadow: 0px 0px 20px 0px #000;
+	padding: 20px;
+	margin: 20px;
+}
+
+main .container p {
+	color: white;
+	height: 10rem;
+	font-weight: normal;
+	overflow: hidden;
+}
+
+main .container h2 {
+	color: white;
+	min-height: 2rem;
+	font-weight: bold;
+}
+
+main .container a {
+	color: white;
+	font-weight: bold;
+}
+
+main .container small {
+	color: white;
+}
+
+main .container .error {
+	color: red;
+}
+
+main ul{
+	flex: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+main ul li {
+	flex: 50%;
+	color: white;
+	text-align: center;
+}
+
+form {
+	width: 100%;
+}
+
+form label {
+	width: 100%;
+	color: white;
+	font-weight: bolder; 
+}
+
+form .submit{
+	width: auto;
+	background-color: white;
+	height: 1.3rem;
+	border-radius: 3px;
+	border: 1px solid white; 
+}
+form textarea {
+	width: 100%;
+	height: 25vw;
+	background-color: black;
+	color: white;
+	resize: none;
+	border-radius: 3px;
+}
+form input {
+	width: 100%;
+	height: 1.3rem;
+	background-color: black;
+	color: white;
+	border-radius: 3px;
+	border: 1px solid white;
+}
+
+@media screen and (min-width: 792px) {
+	nav {
+	grid-area: nav;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index:1000;
+	background-color: black;
+	box-shadow: 0px 4px 20px 2px #000;
+	opacity: 0.8;
+	}
+
+	nav .menu {
+		display: none;
+	}
+
+	main .container {
+		flex-grow: 1;
+		flex: 30%;
+		align-self: flex-start;
+		background-color: #000;
+		border-radius: 3px;
+		opacity: 0.6;
+		box-shadow: 0px 0px 20px 0px #000;
+		padding: 20px;
+		margin: 20px;
+	}
+}
